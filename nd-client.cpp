@@ -33,14 +33,18 @@ usage(std::ostream& os, const po::options_description& options)
 }
 class Options
 {
-public:
-  Options()
-    : m_prefix("/test/Ubuntu/client00")
-    , server_prefix("/ndn/nd")
-    , m_advertise_prefix("/local/advertise")
-    , server_ip("192.168.132.206")
-  {
-  }
+	public:
+	  Options()
+		: m_prefix("/test/Ubuntu/client00")
+		, server_prefix("/ndn/nd")
+		, m_advertise_prefix("/local/advertise")
+		//, server_ip("192.168.132.171")
+	  {
+		cout<<"server ip:";
+		//string server_ip;
+		cin>>server_ip;
+	  }
+
 public:
   ndn::Name m_prefix;
   ndn::Name m_advertise_prefix;
